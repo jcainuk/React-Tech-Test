@@ -3,7 +3,7 @@ import '../styles/Search.css';
 import PropTypes from 'prop-types';
 import getImages from '../requests/getImages';
 
-const Search = () => {
+const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState();
 
   const handleSubmit = async (event) => {
