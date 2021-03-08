@@ -1,22 +1,23 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import Search from '../components/Search';
 
-describe('It renders correctly', () => {
-  const validProps = {
-    searchText: 'Liverpool',
-    setSearchText: jest.fn(),
-    onSubmit: jest.fn(),
-  };
-  it('renders as expected', () => {
-    const { asFragment } = render(<Search {...validProps} />);
-    expect(asFragment).toMatchSnapshot();
+describe('Search', () => {
+  const { asFragment } = render(<Search />);
+
+  it('renders correctly', () => {
+    expect(asFragment()).toMatchSnapshot();
   });
-  it('button fires the search event', () => {
-    const { getByRole } = render(<Search {...validProps} />);
-    const button = getByRole('button');
-    userEvent.click(button);
-    expect(validProps.onSubmit).toHaveBeenCalled();
+
+  it('renders search input as expected', () => {
+    const { getByTestId } = render(<Search />);
+    const input = getByTestId('search-input');
+    expect(input).toBeTruthy();
+  });
+
+  it('renders search button as expected', () => {
+    const { getByTestId } = render(<Search />);
+    const input = getByTestId('search-btn');
+    expect(input).toBeTruthy();
   });
 });
