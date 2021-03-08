@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Search.css';
+import PropTypes from 'prop-types';
 import getImages from '../requests/getImages';
 
 const Search = () => {
@@ -25,6 +26,10 @@ const Search = () => {
       </form>
     </>
   );
+};
+
+Search.propTypes = {
+  setSearchResults: PropTypes.func.isRequired,
 };
 
 export default Search;
