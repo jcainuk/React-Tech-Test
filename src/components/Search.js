@@ -7,7 +7,7 @@ const Search = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getImages(value);
+    setSearchResults(getImages(value));
   };
 
   return (
