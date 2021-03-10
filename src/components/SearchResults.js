@@ -13,7 +13,12 @@ const SearchResults = ({ results }) => {
     <>
       {results.map((image) => (
         <div className="image-container">
-          <img className="image" src={image} alt="spaceImage" />
+          <img
+            className="image"
+            src={image}
+            alt="spaceImage"
+            data-testid="image"
+          />
         </div>
       ))}
     </>
