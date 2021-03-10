@@ -19,6 +19,7 @@ const Search = ({ setSearchResults }) => {
           type="text"
           onChange={(e) => setValue(e.target.value)}
           data-testid="search-input"
+          placeholder="Search for images"
         />
         <button className="search-btn" type="submit" data-testid="search-btn">
           Go!
