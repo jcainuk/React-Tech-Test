@@ -9,7 +9,9 @@ const SearchResults = ({ results }) => {
   return (
     <>
       {results.map((image) => (
-        <img className="card-image" src={image} alt="spaceImage" />
+        <div className="container">
+          <img className="card-image" src={image} alt="spaceImage" />
+        </div>
       ))}
     </>
   );
