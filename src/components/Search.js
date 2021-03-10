@@ -12,7 +12,7 @@ const Search = ({ setSearchResults }) => {
   };
 
   return (
-    <>
+    <div className="search">
       <form className="search-form" onSubmit={handleSubmit}>
         <input
           className="search-input"
@@ -24,7 +24,7 @@ const Search = ({ setSearchResults }) => {
           Go!
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

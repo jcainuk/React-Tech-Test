@@ -9,8 +9,8 @@ const SearchResults = ({ results }) => {
   return (
     <>
       {results.map((image) => (
-        <div className="container">
-          <img className="card-image" src={image} alt="spaceImage" />
+        <div className="image-container">
+          <img className="image" src={image} alt="spaceImage" />
         </div>
       ))}
     </>
