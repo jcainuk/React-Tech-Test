@@ -11,6 +11,7 @@ exports[`<Search /> renders and matches snapshot 1`] = `
       <input
         class="search-input"
         data-testid="search-input"
+        placeholder="Search for images"
         type="text"
       />
       <button
