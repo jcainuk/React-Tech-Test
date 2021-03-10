@@ -15,7 +15,7 @@ const getImages = (query) => {
       return images;
     })
     .catch((err) => {
-      console.log(err);
+      return err;
     });
 };
 
